@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroundDark"
+    tools:context=".AddGameActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="337dp"
+        android:layout_height="321dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="5dp"
+        android:padding="16dp"
+        android:layout_margin="60dp"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.198">
+
+        <android.support.constraint.ConstraintLayout xmlns:card_layout="http://schemas.android.com/apk/res/android"
+            card_layout:layout_width="match_parent"
+            card_layout:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/edit_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                card_layout:layout_marginStart="8dp"
+                card_layout:layout_marginTop="8dp"
+                card_layout:layout_marginEnd="8dp"
+                card_layout:layout_marginBottom="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                card_layout:text="@string/title"
+                app:layout_constraintBottom_toTopOf="@+id/edit_platform"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.075"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.575"
+                android:labelFor="@string/title"/>
+
+            <EditText
+                android:id="@+id/edit_platform"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                card_layout:layout_marginStart="8dp"
+                card_layout:layout_marginEnd="8dp"
+                card_layout:layout_marginBottom="24dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                card_layout:text="@string/platform"
+                app:layout_constraintBottom_toTopOf="@+id/edit_notes"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.075"
+                app:layout_constraintStart_toStartOf="parent"
+                android:labelFor="@string/platform"/>
+
+            <EditText
+                android:id="@+id/edit_notes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                card_layout:layout_marginStart="8dp"
+                card_layout:layout_marginEnd="8dp"
+                card_layout:layout_marginBottom="108dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                card_layout:text="@string/notes"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.075"
+                app:layout_constraintStart_toStartOf="parent"
+                android:labelFor="@string/notes" />
+
+            <Spinner
+                android:id="@+id/edit_status"
+                card_layout:layout_width="270dp"
+                card_layout:layout_height="42dp"
+                card_layout:layout_marginStart="8dp"
+                card_layout:layout_marginTop="8dp"
+                card_layout:layout_marginEnd="8dp"
+                card_layout:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.156"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.878"
+                android:entries="@array/statuses"/>
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        android:src="@drawable/ic_save_white_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.984"
+        android:focusable="true" />
+
+</android.support.constraint.ConstraintLayout>
